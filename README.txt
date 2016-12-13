@@ -1,0 +1,102 @@
+
+
+                                      x
+                            
+                        X program launcher in terminal
+
+
+x is a program launcher, written in POSIX shell with Bash completion for 
+command names. It's for people who have shell ready to use in terminal window.
+
+Essentially, it has just one line of POSIX shell script, and another line for 
+the Bash completion. It really has only two lines if not counting shebangs.
+
+Although x is for launching X programs from terminal, but in code, it has 
+nothing tied to the X Window. It's just and simply a shell script to ensure no 
+noise or interruptions to the terminal after executing the command.
+
+
+                                     WHY?
+
+
+If you always have terminal and are working with command-line most of time, 
+then you must ask yourself why using a GUI launcher or selecting from 
+application menu when you already have a launcher, that is the shell in 
+terminal window, why not just use it?
+
+
+                               (UN)INSTALLTION
+
+
+Use make command to install, the default path is /usr/local, you can override 
+with PREFIX=/path/to. For $HOME installation, run:
+
+    $ make install PREFIX=$HOME/.local
+
+Two files are installed:
+
+- The x command   to $PREFIX/bin
+- Bash completion to $PREFIX/share/bash-completion/completions
+
+To uninstall, in the same case, run:
+
+    $ make uninstall PREFIX=$HOME/.local
+
+
+                                 DEPENDENCIES
+
+
+The only dependency is the nohup command, which can be circumvented with 
+Bash's disown builtin, but that would need one more line and not be POSIX 
+shell compatible.
+
+
+                                   CAVEATS
+
+
+1. The Bash completion for x command will get a list of commands, but not just 
+   executables, but also Bash builtins and keywords, such as for and if 
+   keywords. It's because complete builtin doesn't have an option for 
+   executable-only.
+
+2. Installation does not respect to $BASH_COMPLETION_USER_DIR, which takes 
+   effective to load the completion scripts from since bash-completion commit 
+   1d25d72 [1] (2015-02-17). It's a user-based directory and it'd be 
+   complicated to mix with $PREFIX.
+
+   [1] https://github.com/scop/bash-completion/commit/1d25d72
+
+
+                                  THE NAME X
+
+
+The project name is the same as the command name, x. Several names were 
+considered, but they conflict with existing commands from other projects.  
+Here is the list, in order:
+
+- xr: the initial name, dubbing "x run," but there is a project named xr, 
+  Crossroads Load Balancer.
+- rx: reasonably like running X program, but there is a command called rx from 
+  lrzsz, a communication tool for X, Y, and ZMODEM file transfer protocols.
+- xx: double-tapping, but xx is also taken, some client for the F*EX service.
+
+Finally, just "x" seems fine and perfect, the only X exists is the X11 server, 
+fortunately its command name is a capital X, no conflicts.
+
+
+                                 CONTRIBUTING
+
+
+You are welcome to contribute in anyway you like, but since the minimalistic 
+approach is very much the focal point of this project, that is the initial 4 
+LOC. It would be wise to open an issue to discuss first before working on 
+anything you have in mind.
+
+Also be aware of the copyright, you must agree to use same copyright statement 
+as read in the following COPYRIGHT section.
+
+
+                                  COPYRIGHT
+
+
+x has been placed in public domain or licensed under the UNLICENSE license.
