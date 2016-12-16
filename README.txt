@@ -4,6 +4,8 @@
                             
                         X program launcher in terminal
 
+                       https://github.com/livibetter/x
+
 
 x is a program launcher, written in POSIX shell with Bash completion for 
 command names. It's for people who have shell ready to use in terminal window.
@@ -99,4 +101,4 @@ as read in the following COPYRIGHT section.
                                   COPYRIGHT
 
 
-x has been placed in public domain or licensed under the UNLICENSE license.
+UNLICENSE has been applied to x.
