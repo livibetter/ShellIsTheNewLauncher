@@ -10,9 +10,6 @@
 x is a program launcher, written in POSIX shell with Bash completion for 
 command names. It's for people who have shell ready to use in terminal window.
 
-Essentially, it has just one line of POSIX shell script, and another line for 
-the Bash completion. It really has only two lines if not counting shebangs.
-
 Although x is for launching X programs from terminal, but in code, it has 
 nothing tied to the X Window. It's just and simply a shell script to ensure no 
 noise or interruptions to the terminal after executing the command.
@@ -25,6 +22,12 @@ If you always have terminal and are working with command-line most of time,
 then you must ask yourself why using a GUI launcher or selecting from 
 application menu when you already have a launcher, that is the shell in 
 terminal window, why not just use it?
+
+
+                                    USAGE
+
+
+$ x comman<TAB>
 
 
                                (UN)INSTALLTION
