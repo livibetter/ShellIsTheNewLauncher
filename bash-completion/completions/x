@@ -1,2 +1,2 @@
 #!/bin/bash
-complete -c x
+complete -cf x
