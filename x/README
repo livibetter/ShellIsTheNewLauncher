@@ -4,8 +4,6 @@
                             
                         X program launcher in terminal
 
-            https://github.com/livibetter/ShellIsTheNewLauncher/x
-
 
 x is a program launcher, written in POSIX shell with Bash completion for 
 command names. It's for people who have shell ready to use in terminal window.
