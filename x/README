@@ -4,7 +4,7 @@
                             
                         X program launcher in terminal
 
-                       https://github.com/livibetter/x
+            https://github.com/livibetter/ShellIsTheNewLauncher/x
 
 
 x is a program launcher, written in POSIX shell with Bash completion for 
@@ -15,43 +15,10 @@ nothing tied to the X Window. It's just and simply a shell script to ensure no
 noise or interruptions to the terminal after executing the command.
 
 
-                              WHY FROM TERMINAL?
-
-
-If you always have terminal and are working with command-line most of time, 
-then you must ask yourself why using a GUI launcher or selecting from 
-application menu when you already have a launcher, that is the shell in 
-terminal window, which likely comes with auto-completion, why not just use it?
-
-
                                     USAGE
 
 
 $ x comman<TAB>
-
-
-                              WHY BOTHER WITH x?
-
-
-When running an X Window program from terminal, there is a couple of things 
-need to be dealt with:
-
-1. Possible messages from the program to standard output and error and
-2. The shell you invokes the program is taking over the terminal.
-
-The conventional launcher, you wouldn't see those messages and you don't want 
-to see them, and there is no terminal to take over.  If one program takes one 
-shell, that would be lots of terminal windows.
-
-x silents the messages and detaches the program from the shell, not just 
-invoking the program in background, so when shell exits, the program still 
-runs.
-
-
-                                MANUAL INSTALL
-
-
-Download the x script to be in $PATH, be sure to chmod +x x.
 
 
                                (UN)INSTALLTION

@@ -1,0 +1,69 @@
+
+
+                          Shell Is The New Launcher
+                            
+
+                               WHY FROM SHELL?
+
+
+If you always have a shell just one <mod-tab> keystroke away, then you must 
+ask yourself why using a GUI launcher or selecting from application menu when 
+you already have a perfect launcher, that is the shell in terminal window, 
+which likely comes with auto-completion and history, why not just use it?
+
+Granted, this is not for anyone or any environment, but if you like me, using 
+dwm, and always have a couple of shells ready for commands, try to launch from 
+shell.
+
+And if you are convinced, welcome aboard, my fellow shell launcher!
+
+
+                                     BUT?
+
+
+When running an X Window program from shell, there is a couple of things need 
+to be dealt with:
+
+    1. Possible messages from the program to standard output and error and
+    2. The terminal is now running the program, the shell is in background.
+
+Within the conventional launcher, you wouldn't see those messages and you 
+don't want to see them, and there is no terminal to take over.  If one program 
+takes one shell's terminal, that would be lots of terminal windows.
+
+You can run with
+
+    $ nohup command arg1 arg2 &> /dev/null &
+
+To make sure the messages go to black hole and the program detaches, so it 
+doesn't interfere with the shell and it continues to run even after the shell 
+exits.
+
+The drawback of using shell as launcher for X programs is you need to type 
+lots of extra characters, but the following HELPERS section got you covered.
+
+
+                                   HELPERS
+
+
+There are a few ways to reduce the typing:
+
+    1. add the following function to your shell
+
+        x()
+        {
+            nohup "$@" &> /dev/null &
+        }
+        complete -cf x  # Bash
+
+    2. use the x script in this repository
+
+When using a helper, you only need to type:
+
+    $ x comman<TAB><ENTER>
+
+
+                                  COPYRIGHT
+
+
+UNLICENSE has been applied to this repository.
