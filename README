@@ -9,7 +9,8 @@
 If you always have a shell just one <mod-tab> keystroke away, then you must 
 ask yourself why using a GUI launcher or selecting from application menu when 
 you already have a perfect launcher, that is the shell in terminal window, 
-which likely comes with auto-completion and history, why not just use it?
+which likely comes with auto-completion and history, already loaded and 
+running, awaiting orders, why not just use it?
 
 Granted, this is not for anyone or any environment, but if you like me, using 
 dwm, and always have a couple of shells ready for commands, try to launch from 
